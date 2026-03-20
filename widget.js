@@ -400,22 +400,30 @@
         </div>
 
         <!-- LADDBOX ERBJUDANDE -->
-        <div class="sw-screen" id="sw-laddbox-offer">
-          <div class="inner-body" style="display:flex;flex-direction:column;gap:12px;">
-            <div class="inner-title">Laddbox — se vårt erbjudande</div>
-            <a href="https://www.olsforsel.se/laddbox" target="_blank" style="display:block;border-radius:12px;overflow:hidden;border:1px solid #e8e8ec;">
-              <img
-                src="https://static.wixstatic.com/media/fe5ae4_8d6c80a85b29435687eae9b1b8aa4696~mv2.png/v1/fill/w_496,h_389,fp_0.50_0.43,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/3box.png"
-                alt="Laddbox erbjudande"
-                style="width:100%;height:auto;display:block;transition:opacity 0.15s;"
-                onmouseover="this.style.opacity='0.9'"
-                onmouseout="this.style.opacity='1'"
-              />
-            </a>
-            <a href="https://www.olsforsel.se/laddbox" target="_blank" style="display:block;width:100%;padding:12px;background:#1a1a2e;color:#fff;border-radius:9px;font-size:13px;font-weight:700;text-decoration:none;text-align:center;box-sizing:border-box;">
-              Gå till laddbox-sidan →
-            </a>
-          </div>
+     <div class="sw-screen" id="sw-laddbox-offer">
+  <div class="inner-body" style="display:flex;flex-direction:column;gap:12px;">
+    <div class="inner-title">Laddbox — se vårt erbjudande</div>
+    <a href="https://www.olsforsel.se/laddbox" target="_blank" style="display:block;border-radius:12px;overflow:hidden;border:1px solid #e8e8ec;">
+      <img
+        src="https://static.wixstatic.com/media/fe5ae4_8d6c80a85b29435687eae9b1b8aa4696~mv2.png/v1/fill/w_496,h_389,fp_0.50_0.43,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/3box.png"
+        alt="Laddbox erbjudande"
+        style="width:100%;height:auto;display:block;transition:opacity 0.15s;"
+        onmouseover="this.style.opacity='0.9'"
+        onmouseout="this.style.opacity='1'"
+      />
+    </a>
+    <div style="background:#fff;border:1px solid #e8e8ec;border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:10px;">
+      <div style="font-size:10px;font-weight:700;color:#a0a0b0;text-transform:uppercase;letter-spacing:0.1em;line-height:1.5;">Laddbox med dynamisk lastbalansering, installerad och klar</div>
+      <div style="font-size:22px;font-weight:700;color:#c0392b;letter-spacing:-0.02em;">Från 7 750:-<span style="font-size:11px;color:#a0a0b0;font-weight:400;">*</span></div>
+      <div style="font-size:12.5px;font-weight:700;color:#111118;">Körklar med snabb och säker laddning!</div>
+      <div style="font-size:12px;color:#6b6b7b;line-height:1.65;">Vi installerar laddboxar som uppfyller alla krav för att nyttja skatteavdraget för grön teknik. Det innebär att du kan få <strong>50% i prisavdrag</strong> för arbete och material direkt på fakturan.</div>
+      <div style="font-size:10.5px;color:#a0a0b0;line-height:1.5;border-top:1px solid #e8e8ec;padding-top:8px;">*Priset 7 750:- är med 50% avdrag på fakturan.</div>
+    </div>
+    <a href="https://www.olsforsel.se/laddbox" target="_blank" style="display:block;width:100%;padding:12px;background:#1a1a2e;color:#fff;border-radius:9px;font-size:13px;font-weight:700;text-decoration:none;text-align:center;box-sizing:border-box;">
+      Gå till laddbox-sidan →
+    </a>
+  </div>
+</div>
         </div>
 
         <!-- CONTACT -->

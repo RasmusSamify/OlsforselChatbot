@@ -471,7 +471,7 @@
 
   var expandScreens = ['sw-chat', 'sw-pricing'];
 
-  function swNav(screenId, title) {
+function swNav(screenId, title) {
     document.querySelectorAll('.sw-screen').forEach(function(s) { s.classList.remove('active'); });
     document.getElementById(screenId).classList.add('active');
     document.getElementById('sw-back').classList.add('show');
@@ -482,6 +482,10 @@
     } else {
       widget.classList.remove('expanded');
     }
+    // Triggar Zapier-komponenten att räkna om sin storlek efter CSS-transition
+    setTimeout(function() {
+      window.dispatchEvent(new Event('resize'));
+    }, 320);
   }
 
   function swFaq(btn) { btn.closest('.faq-item').classList.toggle('open'); }

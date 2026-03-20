@@ -63,27 +63,12 @@
     .sw-back.show { display: flex; }
     .sw-back:hover { background: rgba(255,255,255,0.2); }
 
-    /* LOGO in header */
     .sw-logo-wrap {
-      background: #fff;
-      border-radius: 8px;
-      padding: 5px 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
+      background: #fff; border-radius: 8px; padding: 5px 10px;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
     }
-    .sw-logo-wrap img {
-      height: 28px;
-      width: auto;
-      display: block;
-    }
-
-    .sw-header-right {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
+    .sw-logo-wrap img { height: 28px; width: auto; display: block; }
+    .sw-header-right { display: flex; flex-direction: column; gap: 2px; }
     .sw-title { font-size: 13px; font-weight: 700; color: #fff; }
     .sw-status { font-size: 11px; color: rgba(255,255,255,0.5); display: flex; align-items: center; gap: 4px; margin-top: 1px; }
     .sw-dot { width: 5px; height: 5px; border-radius: 50%; background: #4ade80; }
@@ -125,11 +110,9 @@
       display: flex; align-items: center; justify-content: center; flex-shrink: 0;
     }
     .home-card .card-icon-wrap {
-      width: 38px; height: 38px; border-radius: 10px;
-      background: #f0f0f8;
+      width: 38px; height: 38px; border-radius: 10px; background: #f0f0f8;
       display: flex; align-items: center; justify-content: center;
     }
-    .card-icon { font-size: 20px; }
     .card-icon-wrap svg { stroke: #6b6b7b; }
     .home-card.wide .card-icon-wrap svg { stroke: rgba(255,255,255,0.85); }
     .card-label { font-size: 12px; font-weight: 700; color: #111118; }
@@ -149,17 +132,10 @@
     .faq-item { border: 1px solid #e8e8ec; border-radius: 10px; margin-bottom: 8px; overflow: hidden; background: #fff; }
     .faq-q { width: 100%; text-align: left; background: none; border: none; padding: 13px 15px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; font-size: 12.5px; font-weight: 600; color: #111118; transition: background 0.1s; gap: 10px; }
     .faq-q:hover { background: #f7f7f8; }
-    .faq-chevron { flex-shrink: 0; transition: transform 0.2s; color: #a0a0b0; font-size: 14px; }
+    .faq-chevron { flex-shrink: 0; transition: transform 0.2s; color: #a0a0b0; }
     .faq-item.open .faq-chevron { transform: rotate(180deg); }
-    .faq-a { display: none; padding: 0 15px 13px; font-size: 12px; font-weight: 400; color: #6b6b7b; line-height: 1.65; border-top: 1px solid #e8e8ec; padding-top: 11px; }
+    .faq-a { display: none; padding: 11px 15px 13px; font-size: 12px; color: #6b6b7b; line-height: 1.65; border-top: 1px solid #e8e8ec; }
     .faq-item.open .faq-a { display: block; }
-
-    /* BOOKING / CALENDLY */
-    #sw-booking { padding: 0; }
-    #sw-booking .inner-body { padding: 0; height: 100%; display: flex; flex-direction: column; }
-    .calendly-loading { display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 1; gap: 10px; color: #a0a0b0; font-size: 12px; }
-    .calendly-spinner { width: 26px; height: 26px; border-radius: 50%; border: 3px solid #e8e8ec; border-top-color: #1a1a2e; animation: sw-spin 0.8s linear infinite; }
-    @keyframes sw-spin { to { transform: rotate(360deg); } }
 
     /* PRICING */
     .price-toggle { display: flex; background: #ebebeb; border-radius: 8px; padding: 3px; margin-bottom: 14px; gap: 3px; }
@@ -168,41 +144,30 @@
     .price-set { display: none; }
     .price-set.active { display: block; }
     .price-card { background: #fff; border: 1px solid #e8e8ec; border-radius: 12px; padding: 14px; margin-bottom: 10px; }
-    .price-card.featured { border-color: #1a1a2e; border-width: 1.5px; }
-    .price-badge { display: inline-block; font-size: 9.5px; font-weight: 700; background: #e94560; color: #fff; padding: 3px 9px; border-radius: 20px; margin-bottom: 8px; letter-spacing: 0.05em; }
+    .price-card.featured { border-color: #c0392b; border-width: 1.5px; }
+    .price-badge { display: inline-block; font-size: 9.5px; font-weight: 700; background: #c0392b; color: #fff; padding: 3px 9px; border-radius: 20px; margin-bottom: 8px; letter-spacing: 0.05em; }
     .price-tier { font-size: 9.5px; font-weight: 700; color: #a0a0b0; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 2px; }
     .price-name { font-size: 16px; font-weight: 700; color: #111118; margin-bottom: 6px; }
     .price-amount { font-size: 19px; font-weight: 700; color: #1a1a2e; letter-spacing: -0.02em; }
     .price-amount span { font-size: 11px; font-weight: 400; color: #a0a0b0; }
+    .price-note { font-size: 10.5px; color: #a0a0b0; margin-top: 5px; line-height: 1.5; }
     .price-features { margin-top: 10px; display: flex; flex-direction: column; gap: 5px; }
-    .price-feature { font-size: 11.5px; font-weight: 400; color: #6b6b7b; display: flex; align-items: flex-start; gap: 7px; line-height: 1.4; }
+    .price-feature { font-size: 11.5px; color: #6b6b7b; display: flex; align-items: flex-start; gap: 7px; line-height: 1.4; }
     .price-feature::before { content: '✓'; color: #166534; font-weight: 700; font-size: 11px; flex-shrink: 0; margin-top: 1px; }
-    .price-cta { display: block; width: 100%; margin-top: 12px; padding: 10px; background: #1a1a2e; color: #fff; border: none; border-radius: 8px; font-size: 12.5px; font-weight: 700; cursor: pointer; text-align: center; transition: background 0.15s; }
+    .price-cta { display: block; width: 100%; margin-top: 12px; padding: 10px; background: #1a1a2e; color: #fff; border: none; border-radius: 8px; font-size: 12.5px; font-weight: 700; cursor: pointer; text-align: center; transition: background 0.15s; text-decoration: none; box-sizing: border-box; }
     .price-cta:hover { background: #0f3460; }
-    .price-card.featured .price-cta { background: #e94560; }
+    .price-card.featured .price-cta { background: #c0392b; }
     .price-card.featured .price-cta:hover { opacity: 0.88; }
 
     /* CONTACT */
     .contact-card { background: #fff; border: 1px solid #e8e8ec; border-radius: 10px; padding: 14px; margin-bottom: 8px; }
     .contact-head { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-    .contact-av { width: 38px; height: 38px; border-radius: 50%; background: #f0f0f8; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; color: #1a1a2e; flex-shrink: 0; }
+    .contact-av { width: 38px; height: 38px; border-radius: 50%; background: #f0f0f8; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: #1a1a2e; flex-shrink: 0; }
     .contact-name { font-size: 13px; font-weight: 700; color: #111118; }
     .contact-role { font-size: 11px; color: #a0a0b0; }
     .contact-links { display: flex; flex-direction: column; gap: 4px; }
     .contact-link { display: flex; align-items: center; gap: 8px; font-size: 12px; color: #6b6b7b; text-decoration: none; padding: 7px 8px; border-radius: 7px; transition: background 0.1s; }
     .contact-link:hover { background: #f7f7f8; color: #111118; }
-
-    /* KOM IGÅNG */
-    .start-steps { display: flex; flex-direction: column; margin-bottom: 16px; }
-    .start-step { display: flex; gap: 14px; padding: 16px 0; border-bottom: 1px solid #e8e8ec; }
-    .start-step:last-child { border-bottom: none; }
-    .start-num { width: 30px; height: 30px; border-radius: 50%; background: #1a1a2e; color: #fff; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
-    .start-step-title { font-size: 13px; font-weight: 700; color: #111118; margin-bottom: 3px; }
-    .start-step-desc { font-size: 11.5px; font-weight: 400; color: #6b6b7b; line-height: 1.55; }
-    .start-cta-box { background: #1a1a2e; border-radius: 12px; padding: 16px; text-align: center; }
-    .start-cta-box p { font-size: 12px; color: rgba(255,255,255,0.6); margin-bottom: 10px; }
-    .start-cta-btn { padding: 10px 22px; background: #e94560; color: #fff; border: none; border-radius: 8px; font-size: 12.5px; font-weight: 700; cursor: pointer; transition: opacity 0.15s; }
-    .start-cta-btn:hover { opacity: 0.88; }
 
     /* TOOLTIP */
     #samify-tooltip {
@@ -233,7 +198,6 @@
   `;
   document.head.appendChild(style);
 
-  // HTML
   var wrap = document.createElement('div');
   wrap.id = 'samify-widget-container';
   wrap.style.cssText = 'position:fixed;bottom:0;right:0;width:0;height:0;overflow:visible;z-index:9997;';
@@ -260,7 +224,7 @@
         <!-- HOME -->
         <div class="sw-screen active" id="sw-home">
           <div class="home-body">
-            <div class="home-greeting">Hej! Hur kan vi hjälpa dig idag? Välj ett alternativ eller chatta direkt med oss. </div>
+            <div class="home-greeting">Hej! Välkommen till Olsfors Elektriska — din lokala elektriker sedan 1963. Hur kan vi hjälpa dig idag?</div>
             <div class="home-grid">
               <div class="home-card wide" onclick="swNav('sw-chat','Chatta med oss')">
                 <div class="card-icon-wrap"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#ffffff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
@@ -275,20 +239,20 @@
                 <div class="card-label">Vanliga frågor</div>
                 <div class="card-sub">Snabba svar</div>
               </div>
-              <div class="home-card" onclick="swNav('sw-booking','Boka möte')">
-                <div class="card-icon-wrap"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
-                <div class="card-label">Boka möte</div>
-                <div class="card-sub">30 min, gratis</div>
+              <div class="home-card" onclick="swNav('sw-booking','Offertförfrågan')">
+                <div class="card-icon-wrap"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+                <div class="card-label">Offertförfrågan</div>
+                <div class="card-sub">Kostnadsfritt</div>
               </div>
               <div class="home-card" onclick="swNav('sw-pricing','Priser')">
                 <div class="card-icon-wrap"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
                 <div class="card-label">Priser</div>
-                <div class="card-sub">Från 4 995 kr/mån</div>
+                <div class="card-sub">Laddbox fr. 7 750 kr</div>
               </div>
               <div class="home-card" onclick="swNav('sw-contact','Kontakt')">
                 <div class="card-icon-wrap"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.36a2 2 0 0 1 2-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
                 <div class="card-label">Kontakt</div>
-                <div class="card-sub">info@samify.se</div>
+                <div class="card-sub">033 29 53 32</div>
               </div>
             </div>
           </div>
@@ -309,65 +273,61 @@
           <div class="inner-body">
             <div class="inner-title">Vanliga frågor</div>
             <div class="faq-item">
-              <button class="faq-q" onclick="swFaq(this)">Vad är Samify och vad gör ni? <svg class="faq-chevron" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
-              <div class="faq-a">Samify är en AI- och automationsbyrå som hjälper svenska SME-företag att effektivisera sina arbetsflöden med skräddarsydda AI-lösningar och integrationer.</div>
+              <button class="faq-q" onclick="swFaq(this)">Vad gör Olsfors Elektriska? <svg class="faq-chevron" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+              <div class="faq-a">Vi är en lokal elektriker med rötter i Olsfors och Bollebygd sedan 1963. Vi hjälper privatpersoner, företag, industri och fastighetsägare med allt inom el — från kortslutningar till kompletta installationer, solceller, laddboxar och smarta hem.</div>
             </div>
             <div class="faq-item">
-              <button class="faq-q" onclick="swFaq(this)">Behöver vi byta befintliga system? <svg class="faq-chevron" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
-              <div class="faq-a">Nej — vi kopplar samman det ni redan har: Fortnox, Outlook, webCRM, Google Workspace och 6 000+ verktyg. Ni fortsätter jobba som vanligt.</div>
+              <button class="faq-q" onclick="swFaq(this)">Vilka områden jobbar ni i? <svg class="faq-chevron" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+              <div class="faq-a">Vi är verksamma i Olsfors, Bollebygd, Mölnlycke, Landvetter, Härryda, Hindås, Sätila, Kinna, Skene, Fritsla, Fristad och kringliggande orter i Västra Götaland.</div>
             </div>
             <div class="faq-item">
-              <button class="faq-q" onclick="swFaq(this)">Hur snabbt kan vi komma igång? <svg class="faq-chevron" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
-              <div class="faq-a">Normalt 1–2 veckor från signerat avtal till första lösningen är live. Onboarding ingår alltid.</div>
+              <button class="faq-q" onclick="swFaq(this)">Installerar ni laddboxar? <svg class="faq-chevron" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+              <div class="faq-a">Ja! Vi installerar laddboxar för villor, bostadsrättsföreningar och företag. Priset börjar från 7 750 kr (efter 50% grönt avdrag på fakturan). Vi hjälper dig välja rätt box — med eller utan lastbalansering och uppkoppling.</div>
             </div>
             <div class="faq-item">
-              <button class="faq-q" onclick="swFaq(this)">Vad kostar det? <svg class="faq-chevron" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
-              <div class="faq-a">Vi har paket från 4 995 kr/mån. Priset beror på integrationer och anpassningsbehov. Boka ett möte så tar vi fram ett förslag.</div>
+              <button class="faq-q" onclick="swFaq(this)">Vad kostar ett övervakningssystem? <svg class="faq-chevron" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+              <div class="faq-a">Övervakningspaket startar från 5 000 kr. Vi erbjuder allt från en enskild kamera till kompletta system för bostad, fastighet eller verksamhet — inomhus och utomhus, med eller utan inspelning.</div>
             </div>
             <div class="faq-item">
-              <button class="faq-q" onclick="swFaq(this)">Hur tränas chatboten på vår verksamhet? <svg class="faq-chevron" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
-              <div class="faq-a">Vi laddar upp era dokument, priser och rutiner som kunskapskällor. Boten lär sig er röst och vi finjusterar löpande.</div>
+              <button class="faq-q" onclick="swFaq(this)">Installerar ni solceller? <svg class="faq-chevron" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+              <div class="faq-a">Ja, vi installerar solceller och hjälper dig med hela lösningen — från planering till driftsättning. Kontakta oss för en kostnadsfri offert anpassad till din fastighet.</div>
             </div>
             <div class="faq-item">
-              <button class="faq-q" onclick="swFaq(this)">Är lösningen GDPR-säker? <svg class="faq-chevron" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
-              <div class="faq-a">Ja. Vi upprättar alltid ett personuppgiftsbiträdesavtal (DPA) och all data behandlas enligt GDPR.</div>
+              <button class="faq-q" onclick="swFaq(this)">Jobbar ni med industri och entreprenad? <svg class="faq-chevron" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+              <div class="faq-a">Absolut. Vi tar entreprenader av alla storlekar och hjälper industrin med apparatskåp, nyinstallation, felsökning och maskinservice. Vi är med från start till mål.</div>
             </div>
             <div class="faq-item">
-              <button class="faq-q" onclick="swFaq(this)">Hur lång är bindningstiden? <svg class="faq-chevron" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
-              <div class="faq-a">Avtal löper med 3 månaders ömsesidig uppsägningstid. Ni stannar för att det levererar värde — inte för att ni måste.</div>
+              <button class="faq-q" onclick="swFaq(this)">Hur snabbt kan ni komma? <svg class="faq-chevron" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+              <div class="faq-a">Vi prioriterar snabba svar och smidiga lösningar. Ring oss på 033 29 53 32 eller skicka in en offertförfrågan via hemsidan så återkommer vi så fort som möjligt.</div>
             </div>
           </div>
         </div>
 
-        <!-- BOOKING -->
+        <!-- OFFERT -->
         <div class="sw-screen" id="sw-booking">
           <div class="inner-body" style="display:flex;flex-direction:column;gap:12px;">
-            <div class="inner-title">Boka möte</div>
+            <div class="inner-title">Offertförfrågan</div>
             <div style="background:#fff;border:1px solid #e8e8ec;border-radius:12px;padding:18px;text-align:center;">
               <div style="width:48px;height:48px;border-radius:12px;background:#f0f0f8;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#1a1a2e" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#1a1a2e" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
               </div>
-              <div style="font-size:14px;font-weight:700;color:#111118;margin-bottom:6px;">Boka ett kostnadsfritt möte</div>
-              <div style="font-size:12px;color:#6b6b7b;margin-bottom:16px;line-height:1.6;">30 minuter · Videomöte · Välj en tid som passar dig direkt i vår kalender.</div>
-              <button onclick="swOpenCalendlyPopup()" style="width:100%;padding:12px;background:#1a1a2e;color:#fff;border:none;border-radius:9px;font-size:13px;font-weight:700;cursor:pointer;transition:background 0.15s;" onmouseover="this.style.background='#0f3460'" onmouseout="this.style.background='#1a1a2e'">
-                Öppna kalender →
-              </button>
+              <div style="font-size:14px;font-weight:700;color:#111118;margin-bottom:6px;">Skicka in en offertförfrågan</div>
+              <div style="font-size:12px;color:#6b6b7b;margin-bottom:16px;line-height:1.6;">Berätta vad du behöver hjälp med — vi återkommer snabbt med ett prisförslag utan bindning.</div>
+              <a href="https://www.olsforsel.se/kontakt" target="_blank" style="display:block;width:100%;padding:12px;background:#1a1a2e;color:#fff;border-radius:9px;font-size:13px;font-weight:700;text-decoration:none;text-align:center;box-sizing:border-box;">
+                Öppna kontaktformulär →
+              </a>
             </div>
             <div style="background:#fff;border:1px solid #e8e8ec;border-radius:12px;padding:14px;">
-              <div style="font-size:11px;font-weight:700;color:#a0a0b0;text-transform:uppercase;letter-spacing:0.07em;margin-bottom:10px;">Vad ingår i mötet?</div>
-              <div style="display:flex;flex-direction:column;gap:8px;">
-                <div style="display:flex;align-items:center;gap:10px;font-size:12px;color:#6b6b7b;">
-                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#166534" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-                  Genomgång av era nuvarande processer
-                </div>
-                <div style="display:flex;align-items:center;gap:10px;font-size:12px;color:#6b6b7b;">
-                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#166534" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-                  Demo av vad AI kan göra för er
-                </div>
-                <div style="display:flex;align-items:center;gap:10px;font-size:12px;color:#6b6b7b;">
-                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#166534" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-                  Prisindikation utan bindning
-                </div>
+              <div style="font-size:11px;font-weight:700;color:#a0a0b0;text-transform:uppercase;letter-spacing:0.07em;margin-bottom:10px;">Eller nå oss direkt</div>
+              <div style="display:flex;flex-direction:column;gap:6px;">
+                <a href="tel:033295332" style="display:flex;align-items:center;gap:10px;font-size:12px;color:#6b6b7b;text-decoration:none;padding:6px 8px;border-radius:7px;transition:background 0.1s;" onmouseover="this.style.background='#f7f7f8'" onmouseout="this.style.background='transparent'">
+                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.36a2 2 0 0 1 2-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  033 29 53 32
+                </a>
+                <a href="mailto:info@olsforsel.se" style="display:flex;align-items:center;gap:10px;font-size:12px;color:#6b6b7b;text-decoration:none;padding:6px 8px;border-radius:7px;transition:background 0.1s;" onmouseover="this.style.background='#f7f7f8'" onmouseout="this.style.background='transparent'">
+                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  info@olsforsel.se
+                </a>
               </div>
             </div>
           </div>
@@ -376,83 +336,64 @@
         <!-- PRICING -->
         <div class="sw-screen" id="sw-pricing">
           <div class="inner-body">
-            <div class="inner-title">Paket & Priser</div>
+            <div class="inner-title">Priser</div>
             <div class="price-toggle">
-              <button class="price-toggle-btn active" onclick="swPricingTab('chatbot',this)">Chatbot</button>
-              <button class="price-toggle-btn" onclick="swPricingTab('automation',this)">Automatisering</button>
+              <button class="price-toggle-btn active" onclick="swPricingTab('laddbox',this)">Laddbox</button>
+              <button class="price-toggle-btn" onclick="swPricingTab('sakerhet',this)">Säkerhet</button>
             </div>
-            <div id="sw-price-chatbot" class="price-set active">
-              <div class="price-card">
-                <div class="price-tier">Start</div>
-                <div class="price-name">Start</div>
-                <div class="price-amount">från 4 995 <span>kr / månad</span></div>
-                <div class="price-features">
-                  <div class="price-feature">Grundläggande AI tränad på er verksamhet</div>
-                  <div class="price-feature">Extern chatbot för hemsida & leads</div>
-                  <div class="price-feature">Gmail, Slack & CRM-koppling</div>
-                </div>
-                <button class="price-cta" onclick="swOpenCalendly()">Boka demo →</button>
-              </div>
+
+            <div id="sw-price-laddbox" class="price-set active">
               <div class="price-card featured">
-                <div class="price-badge">MEST POPULÄR</div>
-                <div class="price-tier">Tillväxt</div>
-                <div class="price-name">Scale</div>
-                <div class="price-amount">från 9 995 <span>kr / månad</span></div>
+                <div class="price-badge">GRÖNT AVDRAG 50%</div>
+                <div class="price-tier">Privat / Villa</div>
+                <div class="price-name">Hemmaladdning</div>
+                <div class="price-amount">från 7 750 <span>kr</span></div>
+                <div class="price-note">Pris efter 50% grönt avdrag på fakturan. Innan avdrag: från 15 500 kr.</div>
                 <div class="price-features">
-                  <div class="price-feature">Avancerad AI — lär sig kontinuerligt</div>
-                  <div class="price-feature">Extern + intern bot (kunder & HR)</div>
-                  <div class="price-feature">Dedikerad kontaktperson</div>
-                  <div class="price-feature">Automatisk eskalering & arbetsflöden</div>
+                  <div class="price-feature">Uppfyller krav för grönt avdrag</div>
+                  <div class="price-feature">Passar alla elbilsmärken</div>
+                  <div class="price-feature">Med eller utan uppkoppling</div>
+                  <div class="price-feature">Snabb och trygg installation</div>
                 </div>
-                <button class="price-cta" onclick="swOpenCalendly()">Boka demo →</button>
+                <a href="https://www.olsforsel.se/laddbox" target="_blank" class="price-cta">Läs mer om laddbox →</a>
               </div>
               <div class="price-card">
-                <div class="price-tier">Optimal</div>
-                <div class="price-name">Custom</div>
+                <div class="price-tier">BRF / Företag</div>
+                <div class="price-name">Flerladdning</div>
                 <div class="price-amount">Offert <span>kontakta oss</span></div>
                 <div class="price-features">
-                  <div class="price-feature">Bot som agerar direkt i era system</div>
-                  <div class="price-feature">Full integration i realtid</div>
-                  <div class="price-feature">Löpande optimering & förvaltning</div>
+                  <div class="price-feature">Lastbalansering för flera bilar</div>
+                  <div class="price-feature">Skräddarsytt för er fastighet</div>
+                  <div class="price-feature">Framtidssäker lösning</div>
                 </div>
-                <button class="price-cta" onclick="swOpenCalendly()">Kontakta oss →</button>
+                <a href="https://www.olsforsel.se/kontakt" target="_blank" class="price-cta">Begär offert →</a>
               </div>
             </div>
-            <div id="sw-price-automation" class="price-set">
-              <div class="price-card">
-                <div class="price-tier">Start</div>
-                <div class="price-name">Start</div>
-                <div class="price-amount">från 4 995 <span>kr / månad</span></div>
-                <div class="price-features">
-                  <div class="price-feature">Enkla flöden från A till B</div>
-                  <div class="price-feature">E-post, notiser & dataöverföring</div>
-                  <div class="price-feature">Gmail, Slack & Trello</div>
-                </div>
-                <button class="price-cta" onclick="swOpenCalendly()">Boka demo →</button>
-              </div>
+
+            <div id="sw-price-sakerhet" class="price-set">
               <div class="price-card featured">
-                <div class="price-badge">MEST POPULÄR</div>
-                <div class="price-tier">Tillväxt</div>
-                <div class="price-name">Scale</div>
-                <div class="price-amount">från 9 995 <span>kr / månad</span></div>
+                <div class="price-badge">POPULÄRAST</div>
+                <div class="price-tier">Bostad / Fastighet</div>
+                <div class="price-name">Övervakningssystem</div>
+                <div class="price-amount">från 5 000 <span>kr</span></div>
                 <div class="price-features">
-                  <div class="price-feature">Flöden med villkor, filter & felhantering</div>
-                  <div class="price-feature">CRM, ekonomi & projekt synkat</div>
-                  <div class="price-feature">Google & Trustpilot-omdömen automatiskt</div>
-                  <div class="price-feature">SOC 2-säker datahantering</div>
+                  <div class="price-feature">En eller flera kameror</div>
+                  <div class="price-feature">Inomhus och utomhus</div>
+                  <div class="price-feature">Med eller utan inspelning</div>
+                  <div class="price-feature">Enkelt att bygga ut</div>
                 </div>
-                <button class="price-cta" onclick="swOpenCalendly()">Boka demo →</button>
+                <a href="https://www.olsforsel.se/sakerhet" target="_blank" class="price-cta">Läs mer om säkerhet →</a>
               </div>
               <div class="price-card">
-                <div class="price-tier">Optimal</div>
-                <div class="price-name">Custom</div>
+                <div class="price-tier">Företag / Industri</div>
+                <div class="price-name">Komplett säkerhet</div>
                 <div class="price-amount">Offert <span>kontakta oss</span></div>
                 <div class="price-features">
-                  <div class="price-feature">Kartläggning & analys av era processer</div>
-                  <div class="price-feature">Sömlös integration mellan alla system</div>
-                  <div class="price-feature">Löpande optimering & dedikerad kontakt</div>
+                  <div class="price-feature">Passersystem & larm</div>
+                  <div class="price-feature">Anpassat er verksamhet</div>
+                  <div class="price-feature">Dygnet runt-skydd</div>
                 </div>
-                <button class="price-cta" onclick="swOpenCalendly()">Kontakta oss →</button>
+                <a href="https://www.olsforsel.se/kontakt" target="_blank" class="price-cta">Begär offert →</a>
               </div>
             </div>
           </div>
@@ -464,29 +405,37 @@
             <div class="inner-title">Kontakta oss</div>
             <div class="contact-card">
               <div class="contact-head">
-                <div class="contact-av">S</div>
+                <div class="contact-av">OE</div>
                 <div>
-                  <div class="contact-name">Samify</div>
-                  <div class="contact-role">AI & Automationsbyrå · Kalmar</div>
+                  <div class="contact-name">Olsfors Elektriska AB</div>
+                  <div class="contact-role">Elektriker · Olsfors & Västra Götaland</div>
                 </div>
               </div>
               <div class="contact-links">
-                <a href="mailto:info@samify.se" class="contact-link">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                  info@samify.se
+                <a href="tel:033295332" class="contact-link">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.36a2 2 0 0 1 2-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  033 29 53 32
                 </a>
-                <a href="https://samify.se" target="_blank" class="contact-link">
+                <a href="mailto:info@olsforsel.se" class="contact-link">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  info@olsforsel.se
+                </a>
+                <a href="https://www.olsforsel.se" target="_blank" class="contact-link">
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                  samify.se
+                  olsforsel.se
                 </a>
-                <a href="https://www.linkedin.com/company/samify-ai" target="_blank" class="contact-link">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-                  LinkedIn
+                <a href="https://www.facebook.com/olsforsel" target="_blank" class="contact-link">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                  Facebook
                 </a>
-                <a href="mailto:info@samify.se" class="contact-link">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                  Fakturering & avtal
-                </a>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div style="font-size:11px;font-weight:700;color:#a0a0b0;text-transform:uppercase;letter-spacing:0.07em;margin-bottom:8px;">Adress</div>
+              <div style="font-size:12.5px;color:#6b6b7b;line-height:1.8;">
+                Boråsvägen 16<br>
+                517 71 Olsfors<br>
+                <span style="font-size:11px;color:#a0a0b0;">Org.nr 556149-4138</span>
               </div>
             </div>
           </div>
@@ -505,13 +454,10 @@
 
     <div id="samify-tooltip" onclick="swOpenFromTooltip()">
       <button id="samify-tooltip-close" onclick="event.stopPropagation();swCloseTooltip()">✕</button>
-      Hej! Kul att du hittat till Samify — ställ gärna några frågor till mig om du undrar över något! 
+      Hej! Behöver du hjälp med el, laddbox eller solceller? Vi på Olsfors Elektriska hjälper dig gärna!
     </div>
   `;
   document.body.appendChild(wrap);
-
-  // ⬇️ BYT UT MOT ER CALENDLY-LÄNK
-  var CALENDLY_URL = 'https://calendly.com/samify-info';
 
   function swToggle() {
     document.getElementById('samify-widget').classList.toggle('visible');
@@ -542,23 +488,6 @@
     }
   }
 
-  function swOpenCalendlyPopup() {
-    if (!window.Calendly) {
-      var s = document.createElement('script');
-      s.src = 'https://assets.calendly.com/assets/external/widget.js';
-      s.onload = function() {
-        var l = document.createElement('link');
-        l.rel = 'stylesheet';
-        l.href = 'https://assets.calendly.com/assets/external/widget.css';
-        document.head.appendChild(l);
-        window.Calendly.initPopupWidget({ url: CALENDLY_URL });
-      };
-      document.head.appendChild(s);
-    } else {
-      window.Calendly.initPopupWidget({ url: CALENDLY_URL });
-    }
-  }
-
   function swFaq(btn) { btn.closest('.faq-item').classList.toggle('open'); }
 
   function swPricingTab(name, btn) {
@@ -567,8 +496,6 @@
     document.getElementById('sw-price-' + name).classList.add('active');
     btn.classList.add('active');
   }
-
-  function swOpenCalendly() { swOpenCalendlyPopup(); }
 
   function swCloseTooltip() {
     var t = document.getElementById('samify-tooltip');
@@ -591,8 +518,6 @@
   window.swNav = swNav;
   window.swFaq = swFaq;
   window.swPricingTab = swPricingTab;
-  window.swOpenCalendly = swOpenCalendly;
-  window.swOpenCalendlyPopup = swOpenCalendlyPopup;
   window.swCloseTooltip = swCloseTooltip;
   window.swOpenFromTooltip = swOpenFromTooltip;
 })();

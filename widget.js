@@ -260,12 +260,8 @@
 
         <!-- CHAT -->
         <div class="sw-screen" id="sw-chat">
-          <zapier-interfaces-chatbot-embed
-            is-popup="false"
-            chatbot-id="cml7176g80063a6ttccmada8x"
-            height="100%"
-            width="100%"
-          ></zapier-interfaces-chatbot-embed>
+          <script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
+<zapier-interfaces-chatbot-embed is-popup='false' chatbot-id='cmmytkwgn00b31339vxo0x9yx' height='600px' width='400px'></zapier-interfaces-chatbot-embed>
         </div>
 
         <!-- FAQ -->

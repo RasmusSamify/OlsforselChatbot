@@ -477,14 +477,20 @@ function swNav(screenId, title) {
     document.getElementById('sw-back').classList.add('show');
     document.getElementById('sw-header-title').textContent = title;
     var widget = document.getElementById('samify-widget');
-    if (expandScreens.indexOf(screenId) !== -1) {
+    var isExpanded = expandScreens.indexOf(screenId) !== -1;
+    if (isExpanded) {
       widget.classList.add('expanded');
     } else {
       widget.classList.remove('expanded');
     }
-    // Triggar Zapier-komponenten att räkna om sin storlek efter CSS-transition
+    // Sätt Zapier-komponentens dimensioner explicit efter transition
     setTimeout(function() {
-      window.dispatchEvent(new Event('resize'));
+      var bot = document.querySelector('zapier-interfaces-chatbot-embed');
+      if (bot) {
+        var h = widget.offsetHeight - document.querySelector('.sw-header').offsetHeight - document.querySelector('.sw-footer').offsetHeight;
+        bot.setAttribute('height', h + 'px');
+        bot.setAttribute('width', widget.offsetWidth + 'px');
+      }
     }, 320);
   }
 

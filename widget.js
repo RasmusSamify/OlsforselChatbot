@@ -63,15 +63,10 @@
     .sw-back.show { display: flex; }
     .sw-back:hover { background: rgba(255,255,255,0.2); }
 
-  .sw-logo-wrap {
-  background: #000;  /* ← ändra från #fff */
-  border-radius: 8px;
-  padding: 5px 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
+    .sw-logo-wrap {
+      background: #000; border-radius: 8px; padding: 5px 10px;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
     .sw-logo-wrap img { height: 28px; width: auto; display: block; }
     .sw-header-right { display: flex; flex-direction: column; gap: 2px; }
     .sw-title { font-size: 13px; font-weight: 700; color: #fff; }
@@ -265,8 +260,12 @@
 
         <!-- CHAT -->
         <div class="sw-screen" id="sw-chat">
-          <script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
-<zapier-interfaces-chatbot-embed is-popup='false' chatbot-id='cmmytkwgn00b31339vxo0x9yx' height='600px' width='400px'></zapier-interfaces-chatbot-embed>
+          <zapier-interfaces-chatbot-embed
+            is-popup="false"
+            chatbot-id="cml7176g80063a6ttccmada8x"
+            height="100%"
+            width="100%"
+          ></zapier-interfaces-chatbot-embed>
         </div>
 
         <!-- FAQ -->
@@ -356,7 +355,7 @@
                   <div class="price-feature">Med eller utan uppkoppling</div>
                   <div class="price-feature">Snabb och trygg installation</div>
                 </div>
-                <a href="https://www.olsforsel.se/laddbox" target="_blank" class="price-cta">Läs mer om laddbox →</a>
+                <button class="price-cta" onclick="swNav('sw-laddbox-offer','Laddbox')">Läs mer om laddbox →</button>
               </div>
               <div class="price-card">
                 <div class="price-tier">BRF / Företag</div>
@@ -397,6 +396,25 @@
                 <a href="https://www.olsforsel.se/kontakt" target="_blank" class="price-cta">Begär offert →</a>
               </div>
             </div>
+          </div>
+        </div>
+
+        <!-- LADDBOX ERBJUDANDE -->
+        <div class="sw-screen" id="sw-laddbox-offer">
+          <div class="inner-body" style="display:flex;flex-direction:column;gap:12px;">
+            <div class="inner-title">Laddbox — se vårt erbjudande</div>
+            <a href="https://www.olsforsel.se/laddbox" target="_blank" style="display:block;border-radius:12px;overflow:hidden;border:1px solid #e8e8ec;">
+              <img
+                src="https://static.wixstatic.com/media/fe5ae4_8d6c80a85b29435687eae9b1b8aa4696~mv2.png/v1/fill/w_496,h_389,fp_0.50_0.43,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/3box.png"
+                alt="Laddbox erbjudande"
+                style="width:100%;height:auto;display:block;transition:opacity 0.15s;"
+                onmouseover="this.style.opacity='0.9'"
+                onmouseout="this.style.opacity='1'"
+              />
+            </a>
+            <a href="https://www.olsforsel.se/laddbox" target="_blank" style="display:block;width:100%;padding:12px;background:#1a1a2e;color:#fff;border-radius:9px;font-size:13px;font-weight:700;text-decoration:none;text-align:center;box-sizing:border-box;">
+              Gå till laddbox-sidan →
+            </a>
           </div>
         </div>
 
@@ -474,9 +492,9 @@
     document.getElementById('samify-widget').classList.remove('expanded');
   }
 
-  var expandScreens = ['sw-chat', 'sw-pricing'];
+  var expandScreens = ['sw-chat', 'sw-pricing', 'sw-laddbox-offer'];
 
-function swNav(screenId, title) {
+  function swNav(screenId, title) {
     document.querySelectorAll('.sw-screen').forEach(function(s) { s.classList.remove('active'); });
     document.getElementById(screenId).classList.add('active');
     document.getElementById('sw-back').classList.add('show');
@@ -488,7 +506,7 @@ function swNav(screenId, title) {
     } else {
       widget.classList.remove('expanded');
     }
-    // Sätt Zapier-komponentens dimensioner explicit efter transition
+    // Uppdatera Zapier-komponentens dimensioner efter transition
     setTimeout(function() {
       var bot = document.querySelector('zapier-interfaces-chatbot-embed');
       if (bot) {

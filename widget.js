@@ -63,10 +63,15 @@
     .sw-back.show { display: flex; }
     .sw-back:hover { background: rgba(255,255,255,0.2); }
 
-    .sw-logo-wrap {
-      background: #fff; border-radius: 8px; padding: 5px 10px;
-      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-    }
+  .sw-logo-wrap {
+  background: #000;  /* ← ändra från #fff */
+  border-radius: 8px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
     .sw-logo-wrap img { height: 28px; width: auto; display: block; }
     .sw-header-right { display: flex; flex-direction: column; gap: 2px; }
     .sw-title { font-size: 13px; font-weight: 700; color: #fff; }

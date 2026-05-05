@@ -27,6 +27,7 @@
   width: 64px; height: 64px; border-radius: 50%;
   background: linear-gradient(135deg, #d04535 0%, var(--red) 50%, var(--red-dark) 100%);
   border: none; cursor: pointer;
+  color: #fff;
   display: flex; align-items: center; justify-content: center;
   box-shadow:
     0 8px 28px rgba(192,57,43,0.35),
@@ -35,6 +36,10 @@
   transition: transform 0.2s cubic-bezier(0.4,0,0.2,1), box-shadow 0.2s ease;
   z-index: 9999;
 }
+#samify-launcher .si-chat,
+#samify-launcher .si-close { display: flex; align-items: center; justify-content: center; }
+#samify-launcher .si-chat svg,
+#samify-launcher .si-close svg { stroke: #fff; }
 #samify-launcher::after {
   /* subtle inner highlight for depth */
   content: '';

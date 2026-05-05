@@ -1,0 +1,21 @@
+{
+  "name": "olsfors-elektriska-widget",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Embeddable chat widget for Olsfors Elektriska — built by Samify",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:embed": "vite build --config vite.config.embed.js",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^5.4.11"
+  }
+}

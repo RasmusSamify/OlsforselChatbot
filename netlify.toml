@@ -1,0 +1,19 @@
+# Netlify build config — builds both the demo site and the embed bundle.
+# After build:
+#   /              → demo page with widget mounted (from `npm run build`)
+#   /widget.js     → drop-in embed bundle for customer sites (from `npm run build:embed`)
+
+[build]
+  command = "npm run build && npm run build:embed && cp dist-embed/widget.js dist/widget.js"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Allow embedding widget.js cross-origin (customers will load it from their own domains)
+[[headers]]
+  for = "/widget.js"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Cache-Control = "public, max-age=300"
+    Content-Type = "application/javascript; charset=utf-8"

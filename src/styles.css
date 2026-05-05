@@ -25,19 +25,45 @@
 #samify-launcher {
   position: fixed; bottom: 24px; right: 24px;
   width: 64px; height: 64px; border-radius: 50%;
-  background: var(--ink); border: none; cursor: pointer;
+  background: linear-gradient(135deg, #d04535 0%, var(--red) 50%, var(--red-dark) 100%);
+  border: none; cursor: pointer;
   display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 8px 28px rgba(0,0,0,0.28);
-  transition: transform 0.2s, background 0.2s;
+  box-shadow:
+    0 8px 28px rgba(192,57,43,0.35),
+    0 2px 6px rgba(20,20,32,0.18),
+    inset 0 1px 0 rgba(255,255,255,0.18);
+  transition: transform 0.2s cubic-bezier(0.4,0,0.2,1), box-shadow 0.2s ease;
   z-index: 9999;
 }
-#samify-launcher:hover { transform: scale(1.07); background: var(--red); }
+#samify-launcher::after {
+  /* subtle inner highlight for depth */
+  content: '';
+  position: absolute; inset: 0; border-radius: 50%;
+  background: radial-gradient(circle at 30% 25%, rgba(255,255,255,0.18) 0%, transparent 55%);
+  pointer-events: none;
+}
+#samify-launcher:hover {
+  transform: scale(1.08) translateY(-2px);
+  box-shadow:
+    0 14px 36px rgba(192,57,43,0.5),
+    0 4px 8px rgba(20,20,32,0.2),
+    inset 0 1px 0 rgba(255,255,255,0.25);
+}
+#samify-launcher:active { transform: scale(0.96); }
+#samify-launcher.open {
+  background: linear-gradient(135deg, var(--ink) 0%, var(--ink-2) 100%);
+  box-shadow:
+    0 8px 28px rgba(20,20,32,0.4),
+    0 2px 6px rgba(20,20,32,0.2),
+    inset 0 1px 0 rgba(255,255,255,0.08);
+}
 #samify-launcher.open .si-chat { display: none; }
 #samify-launcher.open .si-close { display: block !important; }
 #samify-launcher .pulse {
   position: absolute; inset: 0; border-radius: 50%;
   box-shadow: 0 0 0 0 rgba(192,57,43,0.5);
   animation: pulseRing 2.4s cubic-bezier(0.4,0,0.6,1) infinite;
+  pointer-events: none;
 }
 #samify-launcher.open .pulse { display: none; }
 @keyframes pulseRing {
